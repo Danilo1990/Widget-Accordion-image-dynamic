@@ -48,13 +48,14 @@ function custom_elementor_register_widgets($widgets_manager) {
 add_action('elementor/widgets/widgets_registered', 'custom_elementor_register_widgets');
 
 // Register Custom Widget Category
-function custom_elementor_add_widget_categories($elements_manager) {
-    $elements_manager->add_category(
-        'custom',
-        [
-            'title' => __('Custom', 'plugin-name'),
-            'icon' => 'fa fa-plug', // Opzionale: icona per la categoria
-        ]
-    );
+function add_elementor_widget_categories_accordion_image( $elements_manager ) {
+
+	$elements_manager->add_category(
+		'dc_cat',
+		[
+			'title' => esc_html__( 'DC Plugin', 'textdomain' ),
+			'icon' => 'fa fa-plug',
+		]
+	);
 }
-add_action('elementor/elements/categories_registered', 'custom_elementor_add_widget_categories');
+add_action( 'elementor/elements/categories_registered', 'add_elementor_widget_categories_accordion_image' );
