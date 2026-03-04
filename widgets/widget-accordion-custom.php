@@ -10,7 +10,7 @@ class Widget_Accordion_Custom extends Widget_Base {
     public function get_name()           { return 'accordion_custom'; }
     public function get_title()          { return __( 'Accordion Corsi', 'custom-widget' ); }
     public function get_icon()           { return 'eicon-accordion'; }
-    public function get_categories()     { return [ 'custom' ]; }
+    public function get_categories()     { return [ 'dc_cat' ]; }
     public function get_script_depends() { return [ 'custom-accordion-js' ]; }
     public function get_style_depends()  { return [ 'custom-accordion-css' ]; }
 
